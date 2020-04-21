@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: mywebapp-con
-          image: adamcao/springweb:1.0
+          image: tagVersion
           ports:
             - containerPort: 8081
 
