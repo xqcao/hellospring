@@ -5,7 +5,8 @@ metadata:
 spec:
   replicas: 1
   selector:
-    app: mywebapp
+    matchLabels:
+      app: mywebapp
   template:
     metadata:
       labels:
@@ -30,4 +31,3 @@ spec:
     - name: name-of-the-port
       port: 8082
       targetPort: 8081
-      nodePort: 38383
