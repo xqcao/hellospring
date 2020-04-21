@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: mywebapp-con
-          image: adamcao/tagVersion
+          image: adamcao/myflaskweb:tagVersion
           ports:
             - containerPort: 8081
 
