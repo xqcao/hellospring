@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebapp
+spec:
+  replicas: 1
+  selector:
+    app: mywebapp
+  template:
+    metadata:
+      labels:
+        app: mywebapp
+    spec:
+      containers:
+        - name: mywebapp-con
+          image: adamcao/springweb:1.0
+          ports:
+            - containerPort: 8081
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mywebapp-svc
+spec:
+  selector:
+    app: mywebapp
+  type: NodePort
+  ports:
+    - name: name-of-the-port
+      port: 8082
+      targetPort: 8081
+      nodePort: 38383
