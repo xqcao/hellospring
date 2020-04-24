@@ -13,4 +13,9 @@ public class MyController {
         return "Hello world";
     }
 
+    @RequestMapping("/")
+    public String home() {
+        return "welcome back home";
+    }
+
 }
