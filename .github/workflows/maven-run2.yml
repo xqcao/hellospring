@@ -28,4 +28,4 @@ jobs:
         name: artifact
         path: target/hellospring.jar
     - name: run mvn
-      run: java -jar target/hellospring.jar
+      run: java -jar target/*.jar
